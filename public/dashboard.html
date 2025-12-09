@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:">
+    <title>Journal Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📔 My Journal</h2>
+                <p id="username" class="username"></p>
+            </div>
+            <button id="newEntryBtn" class="new-entry-btn">+ New Entry</button>
+            <div class="entries-list">
+                <h3>Recent Entries</h3>
+                <ul id="entriesList"></ul>
+            </div>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </aside>
+
+        <main class="main-content">
+            <div id="emptyState" class="empty-state">
+                <p>📝 Select an entry or create a new one to get started</p>
+            </div>
+
+            <div id="editorArea" class="editor-area" style="display: none;">
+                <div class="editor-header">
+                    <input type="text" id="entryTitle" class="entry-title" placeholder="Entry Title">
+                    <div class="editor-actions">
+                        <button id="saveBtn" class="btn-save">Save</button>
+                        <button id="deleteBtn" class="btn-delete">Delete</button>
+                    </div>
+                </div>
+                <textarea id="entryContent" class="entry-content" placeholder="Write your thoughts here..."></textarea>
+                <div class="entry-meta">
+                    <span id="entryDate" class="entry-date"></span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for new entry -->
+    <div id="newEntryModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Entry</h2>
+            <input type="text" id="newEntryTitle" class="modal-input" placeholder="Entry Title">
+            <textarea id="newEntryContent" class="modal-textarea" placeholder="Write your journal entry..."></textarea>
+            <button id="createEntryBtn" class="btn-primary">Create Entry</button>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

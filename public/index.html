@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 id="title">Welcome</h1>
+            <p id="message" style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em;"></p>
+            <a id="primaryBtn" href="/login" class="btn" style="display: block; text-align: center; text-decoration: none;">Login</a>
+            <a id="secondaryBtn" href="/register" class="btn" style="display: block; text-align: center; text-decoration: none; margin-top: 10px;">Register</a>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
